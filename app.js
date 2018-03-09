@@ -1,26 +1,27 @@
-const express         = require('express');
-const mongoose        = require('mongoose');
-const path            = require('path');
-const bodyParser      = require('body-parser');
-const passport        = require('passport');
-const LocalStrategy   = require('passport-local');
-const methodOverride  = require('method-override');
-const flash           = require('connect-flash');
+const dotenv = require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const methodOverride = require('method-override');
+const flash = require('connect-flash');
 
 // ----- APP CONFIGURATION -----
 
 // Import models
-const Resort    = require('./models/resort');
-const Comment   = require('./models/comment');
-const User      = require('./models/user');
+const Resort = require('./models/resort');
+const Comment = require('./models/comment');
+const User = require('./models/user');
 
 // Import route files
-const resortRoutes    = require('./routes/resorts');
-const commentRoutes   = require('./routes/comments');
-const indexRoutes     = require('./routes/index');
+const resortRoutes = require('./routes/resorts');
+const commentRoutes = require('./routes/comments');
+const indexRoutes = require('./routes/index');
 
 // Connect to the database
-mongoose.connect('mongodb://localhost/mountain_calling');
+mongoose.connect(process.env.DATABASE_URL);
 
 // Initialize the app
 const app = express();
