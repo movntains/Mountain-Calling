@@ -1,0 +1,30 @@
+.alert-container {
+  margin-bottom: 1.5rem;
+}
+
+.alert-success,
+.alert-danger,
+.alert-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 79vw;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.alert-success {
+  border: solid 1px $button-green;
+  background-color: $success;
+}
+
+.alert-danger,
+.alert-error {
+  border: solid 1px $button-red;
+  background-color: $danger;
+}

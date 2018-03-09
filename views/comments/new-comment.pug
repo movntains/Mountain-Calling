@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  .form-container
+    h1 Add a New Comment
+
+    form(action="/resorts/" + resort._id + "/comments", method="POST")
+      .form-group
+        label(for="name") Comment:
+        input.form-control(type="text", name="comment[text]", placeholder="Text")
+      .form-group
+        input.submit-button(type="submit", value="Submit")
+      a.cancel-button(href="/resorts/" + resort._id) Cancel

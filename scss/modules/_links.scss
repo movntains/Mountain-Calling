@@ -1,0 +1,14 @@
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $button-grey;
+}
+
+a:hover {
+  color: lighten($color: $bg-blue, $amount: 30%);
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+}

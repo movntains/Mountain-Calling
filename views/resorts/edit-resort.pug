@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .form-container
+    h1 Edit #{resort.name}
+
+    form(action="/resorts/" + resort._id + "?_method=PUT", method="POST")
+      .form-group
+        label(for="resort[name]") Resort Name:
+        input.form-control(type="text", name="resort[name]", value=resort.name)
+      .form-group
+        label(for="resort[price]") Price:
+        input.form-control(type="number", name="resort[price]", value=resort.price, min="0.00", step="0.01")
+      .form-group
+        label(for="resort[image]") Image:
+        input.form-control(type="text", name="resort[image]", value=resort.image)
+      .form-group
+        label(for="resort[description]") Description:
+        input.form-control(type="text", name="resort[description]", value=resort.description)
+      .form-group
+        input.submit-button(type="submit", value="Submit")
+      a.cancel-button(href="/resorts/" + resort._id) Cancel

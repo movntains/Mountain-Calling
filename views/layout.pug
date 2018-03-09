@@ -1,0 +1,70 @@
+doctype html
+
+html
+  head
+    title Mountain Calling
+
+    //- Google Fonts
+    link(href="https://fonts.googleapis.com/css?family=Barlow:400,700|Rock+Salt" rel="stylesheet")
+
+    //- Font Awesome CSS
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    //- Custom CSS
+    link(rel="stylesheet", type="text/css", href="/css/styles.css")
+  
+  body
+
+    //- Mobile menu
+    .mobile-menu
+      #mobile-menu-close
+        i.fa.fa-times(aria-hidden="true")
+      
+      ul#menu
+        if (currentUser)
+          li
+            a(href="#") #{currentUser.username}
+          li
+            a(href="/logout") Logout
+        else
+          li
+            a.nav-link(href="/register") Register
+          li
+            a.nav-link(href="/login") Login
+
+    //- Navigation
+    nav
+      .nav-container
+        .brand-container
+          img.logo-brand(src="/images/mountain-logo.png", alt="Logo")
+          a.brand(href='/resorts') Mountain Calling
+
+        .link-container
+          ul#menu
+            if (currentUser)
+              li
+                a(href="#") #{currentUser.username}
+              li
+                a(href="/logout") Logout
+            else
+              li
+                a.nav-link(href="/register") Register
+              li
+                a.nav-link(href="/login") Login
+          
+          //- Mobile menu button
+          #mobile-menu-open
+            i.fa.fa-bars(aria-hidden="true")
+    
+    .body-container
+      .container
+        .alert-container
+          //- Flash messages
+          != messages('message', locals)
+
+        block content
+
+      footer
+        p Copyright &copy; 2018 Mountain Calling
+
+    script(src="/js/main.js")

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .form-container
+    h1 Sign Up
+
+    form(action="/register", method="POST")
+      .form-group
+        label(for="username") Username:
+        input.form-control(type="text", name="username", placeholder="Username")
+      .form-group
+        label(for="image") Password:
+        input.form-control(type="password", name="password", placeholder="Password")
+      .form-group
+        input.submit-button(type="submit", value="Sign Up")

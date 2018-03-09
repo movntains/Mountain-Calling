@@ -1,0 +1,133 @@
+#mobile-menu-open {
+  display: none;
+  cursor: pointer;
+  background-color: $button-grey;
+	color: $bg-blue;
+	font-size: 1.5em;
+	z-index: 20;
+	padding: 0 7px;
+	border-radius: 4px;
+}
+
+#mobile-menu-close {
+  display: none;
+	text-align: right;
+	width: 100%;
+  background: $bg-blue;
+  color: $button-grey;
+	font-size: 1.5em;
+  padding: 0;
+	cursor: pointer;
+  
+  i {
+    vertical-align: middle;
+    padding: 15px;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  background-color: $bg-blue;
+  box-shadow: 0 2px 5px 2px $font-dark;
+}
+
+.brand-container,
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-container {
+  padding-top: 0.5rem;
+}
+
+img.logo-brand {
+  width: 40px;
+  height: 40px;
+}
+
+a.brand {
+  margin-left: 1rem;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+#menu {
+  &.active {
+    display: block;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+}
+
+// --------------------
+// ------ MOBILE ------
+// --------------------
+
+@media only screen and (max-width: 768px) {
+
+  .mobile-menu {
+    position: fixed;
+		display: none;
+		z-index: 999;
+		animation: none;
+		bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.95;
+    background-color: $bg-blue;
+  }
+
+  #mobile-menu-open,
+  #mobile-menu-close {
+    display: block;
+  }
+
+  .nav-container #menu {
+    display: none;
+  }
+
+  .mobile-menu #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+		overflow-y: auto;
+		box-shadow: none;
+    border-radius: 0;
+    
+    li {
+      display: block;
+      margin-bottom: 1.8rem;
+      font-size: 1.8rem;
+    }
+  }
+}

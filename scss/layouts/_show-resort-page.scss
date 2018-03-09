@@ -1,0 +1,235 @@
+.show-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.info-comments-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+// ----- RESORT STATS -----
+
+.resort-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px $button-grey;
+  box-shadow: 3px 3px 5px 3px $border-grey;
+  border-radius: 0.4rem;
+  width: 20%;
+}
+
+.resort-stats h3 {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: $bg-blue;
+  width: 100%;
+  color: $button-grey;
+  font-family: $font-heading;
+  letter-spacing: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.resort-stats ul {
+  list-style: none;
+  width: 100%;
+}
+
+.resort-stats li {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+
+.resort-stats ul li:nth-child(2n) {
+  background-color: $button-grey;
+}
+
+// ----- RESORT INFO -----
+
+.resort-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px $button-grey;
+  box-shadow: 3px 3px 5px 3px $border-grey;
+  border-radius: 0.4rem;
+}
+
+.resort-info-container img {
+  height: 500px;
+  width: 100%;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;  
+}
+
+.name-price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+h4.resort-name {
+  font-family: $font-heading;
+  color: $bg-blue;
+  letter-spacing: 0.3rem;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 70px;
+  font-size: 1.4rem;
+}
+
+p.description {
+  margin-bottom: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+}
+
+// ----- COMMENTS -----
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  box-shadow: 3px 3px 5px 3px $border-grey;
+  border-radius: 0.4rem;
+}
+
+.new-comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $button-grey;
+  box-sizing: border-box;
+  padding-right: 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom: solid 1px $bg-blue;
+}
+
+.all-comments-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.single-comment-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+}
+
+.single-comment-container:nth-child(2n) {
+  background-color: $button-grey;
+}
+
+.single-comment-container:last-of-type {
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.single-comment-container .buttons-container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.author-date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+p.author,
+p.post-date {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+p.post {
+  font-size: 1.4rem;
+}
+
+// ----- MOBILE -----
+
+@media (max-width: 1250px) {
+  .show-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .resort-stats,
+  .info-comments-container {
+    width: 75%;
+  }
+
+  .resort-stats {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .resort-stats,
+  .info-comments-container {
+    width: 90%;
+  }
+
+  .resort-stats {
+    height: 40%;
+  }
+}
+
+@media (max-width: 550px) {
+  .resort-info-container img {
+    height: 300px;
+  }
+
+  .name-price-container {
+    flex-direction: column;
+  }
+}

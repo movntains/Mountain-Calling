@@ -1,0 +1,52 @@
+extends ../layout
+
+block content
+  .show-container
+
+    //- Sidebar
+    .resort-stats
+      h3 Resort Stats
+      ul
+        li Info 1
+        li Info 2
+        li Info 3
+  
+    .info-comments-container
+      //- Resort information
+      .resort-info-container
+        img(src=resort.image, alt="Resort")
+
+        .name-price-container
+          h4.resort-name #{resort.name}
+          h4 $#{resort.price}/night
+        
+        .description-container
+          p.description #{resort.description}
+          p: em Submitted by: #{resort.author.username}
+
+        .buttons-container
+          if (currentUser && resort.author.id.equals(currentUser._id))
+            a.edit-button(href="/resorts/" + resort._id + "/edit") Edit
+
+            form.delete(action="/resorts/" + resort._id + "?_method=DELETE", method="POST")
+              button.delete-button Delete
+
+      //- Resort comments
+      .comments-container
+        .new-comment-container
+          a.link-button.link-button-small(href="/resorts/" + resort._id + "/comments/new") Add New Comment
+        
+        .all-comments-container
+          each comment, i in resort.comments
+            .single-comment-container
+              .author-date-container
+                p.author #{comment.author.username}
+                p.post-date 10 days ago
+              p.post #{comment.text}
+
+              .buttons-container
+                if (currentUser && comment.author.id.equals(currentUser._id))
+                  a.edit-button(href="/resorts/" + resort._id + "/comments/" + comment._id + "/edit") Edit
+
+                  form.delete(action="/resorts/" + resort._id + "/comments/" + comment._id + "?_method=DELETE", method="POST")
+                    button.delete-button Delete

@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  .form-container
+    h1 Edit Comment
+
+    form(action="/resorts/" + resort_id + "/comments/" + comment._id + "?_method=PUT", method="POST")
+      .form-group
+        label(for="comment[text]") Comment:
+        input.form-control(type="text", name="comment[text]", value=comment.text)
+      .form-group
+        input.submit-button(type="submit", value="Submit")
+      a.cancel-button(href="/resorts/" + resort_id) Cancel

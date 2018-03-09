@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .header-container
+    h1 Welcome to Mountain Calling!
+
+    p Browse all resorts that have been posted by other users, or add your own to the mix.
+
+    a.link-button(href="/resorts/new") Add a New Resort
+  
+  .resorts-container
+    h2 Our Most Popular Resorts
+
+    .resort-display-container
+      each resort, i in resorts
+        .resort-image
+          img(src=resort.image, alt="Resort")
+          h4 #{resort.name}
+          a.link-button.link-button-small(href="/resorts/" + resort._id) More Info

@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  font-size: 10px;
+  background-color: #f3f2f2;
+  font-family: "Barlow";
+  color: #222222;
+  height: 100%;
+  width: 100%; }
+
+body.active {
+  overflow: hidden;
+  z-index: -1; }
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100%; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+
+a.link-button {
+  padding: 1.5rem;
+  background-color: #3b4e7e;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  margin: 1.5rem 0; }
+
+a.link-button-small {
+  font-size: 1.5rem; }
+
+a.link-button:link,
+a.link-button:visited {
+  color: #e4e4e4;
+  text-decoration: none; }
+
+a.link-button:hover {
+  background-color: #4b64a1; }
+
+a.link-button:active {
+  position: relative;
+  top: 0.1rem; }
+
+.submit-button {
+  padding: 1.2rem;
+  background-color: #3b4e7e;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: #e4e4e4;
+  width: 100%; }
+
+.submit-button:hover {
+  background-color: #4b64a1; }
+
+.submit-button:active {
+  position: relative;
+  top: 0.1rem;
+  outline: none; }
+
+.edit-button {
+  background-color: #349b73;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-radius: 0.4rem;
+  font-size: 1.5rem; }
+
+a.edit-button:hover {
+  background-color: #42c08f;
+  color: #222222; }
+
+.delete-button {
+  background-color: #f3f2f2;
+  padding: 1rem 1.5rem;
+  font-family: "Barlow";
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  color: #c73939;
+  outline: none;
+  border: solid 1px #c73939; }
+
+.delete-button:hover {
+  background-color: #d26161;
+  color: #222222; }
+
+a.cancel-button:link,
+a.cancel-button:visited {
+  background-color: #f3f2f2;
+  padding: 1rem 1.5rem;
+  border: solid 1px #c73939;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  display: block;
+  color: #c73939; }
+
+a.cancel-button:hover {
+  background-color: #d26161;
+  color: #222222; }
+
+.landing-container {
+  display: flex; }
+
+.showcase-img {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.9; }
+
+.showcase-img h1 {
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  margin-left: 0.5rem;
+  font-family: "Rock Salt";
+  font-size: 4.5rem;
+  letter-spacing: 0.3rem;
+  color: #000000; }
+
+img.logo {
+  width: 60px;
+  height: 60px; }
+
+.info {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.info img {
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1rem; }
+
+.info h2 {
+  font-family: "Rock Salt";
+  font-size: 1.8rem;
+  border-bottom: solid 0.1rem #222222;
+  margin-bottom: 1.5rem; }
+
+.info p {
+  font-size: 1.8rem;
+  padding: 1rem 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5; }
+
+@media (max-width: 1300px) {
+  .landing-container {
+    flex-direction: column; }
+
+  .showcase-img,
+  .info {
+    width: 100%; } }
+@media (max-width: 650px) {
+  .showcase-img h1 {
+    font-size: 2rem; }
+
+  .info h2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.4rem; } }
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+  border: solid 1px #e4e4e4;
+  box-shadow: 3px 3px 5px 3px #e4e4e4;
+  border-radius: 0.4rem; }
+
+.header-container h1 {
+  font-family: "Rock Salt";
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 0 1.5rem; }
+
+.header-container p {
+  font-size: 2rem;
+  padding: 1rem 1.5rem; }
+
+.resorts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 3rem auto;
+  border: solid 1px #e4e4e4;
+  box-shadow: 3px 3px 5px 3px #e4e4e4;
+  border-radius: 0.4rem;
+  padding-bottom: 2rem; }
+
+.resorts-container h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0; }
+
+.resort-display-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 2fr;
+  justify-items: center;
+  margin-top: 1rem; }
+
+.resort-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  border: solid 1px #3b4e7e;
+  border-radius: 0.4rem;
+  margin-bottom: 2.5rem; }
+
+.resort-image img {
+  width: 400px;
+  height: 300px;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  margin-bottom: 1rem; }
+
+.resort-image h4 {
+  font-size: 1.5rem; }
+
+@media (max-width: 1100px) {
+  .resort-display-container {
+    grid-template-columns: 100%; } }
+@media (max-width: 800px) {
+  .header-container,
+  .resorts-container {
+    width: 90vw; }
+
+  .header-container h1 {
+    font-size: 1.8rem;
+    text-align: center; }
+
+  .header-container p {
+    font-size: 1.6rem;
+    text-align: center; } }
+@media (max-width: 500px) {
+  .resort-image {
+    width: 300px;
+    height: 300px; }
+
+  .resort-image img {
+    width: 300px;
+    height: 200px; } }
+.show-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 2rem; }
+
+.info-comments-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+
+.resort-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px #e4e4e4;
+  box-shadow: 3px 3px 5px 3px #968e8e;
+  border-radius: 0.4rem;
+  width: 20%; }
+
+.resort-stats h3 {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #3b4e7e;
+  width: 100%;
+  color: #e4e4e4;
+  font-family: "Rock Salt";
+  letter-spacing: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem; }
+
+.resort-stats ul {
+  list-style: none;
+  width: 100%; }
+
+.resort-stats li {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
+  height: 40px;
+  line-height: 40px;
+  width: 100%; }
+
+.resort-stats ul li:nth-child(2n) {
+  background-color: #e4e4e4; }
+
+.resort-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px #e4e4e4;
+  box-shadow: 3px 3px 5px 3px #968e8e;
+  border-radius: 0.4rem; }
+
+.resort-info-container img {
+  height: 500px;
+  width: 100%;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem; }
+
+.name-price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1.8rem; }
+
+h4.resort-name {
+  font-family: "Rock Salt";
+  color: #3b4e7e;
+  letter-spacing: 0.3rem; }
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 70px;
+  font-size: 1.4rem; }
+
+p.description {
+  margin-bottom: 1rem; }
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem; }
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  box-shadow: 3px 3px 5px 3px #968e8e;
+  border-radius: 0.4rem; }
+
+.new-comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e4e4e4;
+  box-sizing: border-box;
+  padding-right: 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom: solid 1px #3b4e7e; }
+
+.all-comments-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%; }
+
+.single-comment-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%; }
+
+.single-comment-container:nth-child(2n) {
+  background-color: #e4e4e4; }
+
+.single-comment-container:last-of-type {
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem; }
+
+.single-comment-container .buttons-container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.author-date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 100%; }
+
+p.author,
+p.post-date {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem; }
+
+p.post {
+  font-size: 1.4rem; }
+
+@media (max-width: 1250px) {
+  .show-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+
+  .resort-stats,
+  .info-comments-container {
+    width: 75%; }
+
+  .resort-stats {
+    margin-bottom: 2rem; } }
+@media (max-width: 750px) {
+  .resort-stats,
+  .info-comments-container {
+    width: 90%; }
+
+  .resort-stats {
+    height: 40%; } }
+@media (max-width: 550px) {
+  .resort-info-container img {
+    height: 300px; }
+
+  .name-price-container {
+    flex-direction: column; } }
+.alert-container {
+  margin-bottom: 1.5rem; }
+
+.alert-success,
+.alert-danger,
+.alert-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 79vw;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: center; }
+
+.alert-success {
+  border: solid 1px #349b73;
+  background-color: #cce4c3; }
+
+.alert-danger,
+.alert-error {
+  border: solid 1px #c73939;
+  background-color: #e49090; }
+
+a.link-button {
+  padding: 1.5rem;
+  background-color: #3b4e7e;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  margin: 1.5rem 0; }
+
+a.link-button-small {
+  font-size: 1.5rem; }
+
+a.link-button:link,
+a.link-button:visited {
+  color: #e4e4e4;
+  text-decoration: none; }
+
+a.link-button:hover {
+  background-color: #4b64a1; }
+
+a.link-button:active {
+  position: relative;
+  top: 0.1rem; }
+
+.submit-button {
+  padding: 1.2rem;
+  background-color: #3b4e7e;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: #e4e4e4;
+  width: 100%; }
+
+.submit-button:hover {
+  background-color: #4b64a1; }
+
+.submit-button:active {
+  position: relative;
+  top: 0.1rem;
+  outline: none; }
+
+.edit-button {
+  background-color: #349b73;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-radius: 0.4rem;
+  font-size: 1.5rem; }
+
+a.edit-button:hover {
+  background-color: #42c08f;
+  color: #222222; }
+
+.delete-button {
+  background-color: #f3f2f2;
+  padding: 1rem 1.5rem;
+  font-family: "Barlow";
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  color: #c73939;
+  outline: none;
+  border: solid 1px #c73939; }
+
+.delete-button:hover {
+  background-color: #d26161;
+  color: #222222; }
+
+a.cancel-button:link,
+a.cancel-button:visited {
+  background-color: #f3f2f2;
+  padding: 1rem 1.5rem;
+  border: solid 1px #c73939;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  display: block;
+  color: #c73939; }
+
+a.cancel-button:hover {
+  background-color: #d26161;
+  color: #222222; }
+
+footer {
+  background-color: #3b4e7e;
+  padding: 1.5rem 0;
+  border-top: solid 1px #e4e4e4;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 1.5rem; }
+
+footer p {
+  color: #e4e4e4;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+@media (max-width: 650px) {
+  footer p {
+    width: 100%;
+    text-align: center; } }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto; }
+
+.form-container h1 {
+  font-family: "Rock Salt";
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  margin-bottom: 1rem; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.8rem;
+  width: 300px;
+  margin-bottom: 1rem; }
+
+.form-control {
+  box-sizing: border-box;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+  height: 40px;
+  border: solid 1px #3b4e7e;
+  border-radius: 0.4rem;
+  outline: none;
+  background-color: #f4f4f4;
+  font-size: 1.5rem; }
+
+.form-control:focus {
+  background-color: #e4e4e4; }
+
+@media (max-width: 850px) {
+  .form-container h1 {
+    font-size: 2rem; } }
+@media (max-width: 550px) {
+  .form-container h1 {
+    text-align: center; } }
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #e4e4e4; }
+
+a:hover {
+  color: #8a9cc8; }
+
+a:active {
+  position: relative;
+  top: 1px; }
+
+#mobile-menu-open {
+  display: none;
+  cursor: pointer;
+  background-color: #e4e4e4;
+  color: #3b4e7e;
+  font-size: 1.5em;
+  z-index: 20;
+  padding: 0 7px;
+  border-radius: 4px; }
+
+#mobile-menu-close {
+  display: none;
+  text-align: right;
+  width: 100%;
+  background: #3b4e7e;
+  color: #e4e4e4;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer; }
+  #mobile-menu-close i {
+    vertical-align: middle;
+    padding: 15px; }
+
+.mobile-menu {
+  display: none; }
+  .mobile-menu.active {
+    display: block; }
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  background-color: #3b4e7e;
+  box-shadow: 0 2px 5px 2px #222222; }
+
+.brand-container,
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.brand-container {
+  padding-top: 0.5rem; }
+
+img.logo-brand {
+  width: 40px;
+  height: 40px; }
+
+a.brand {
+  margin-left: 1rem;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem; }
+
+#menu.active {
+  display: block; }
+
+ul {
+  list-style: none; }
+
+ul li {
+  display: inline;
+  margin-right: 1.5rem;
+  text-transform: uppercase; }
+
+@media only screen and (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    animation: none;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.95;
+    background-color: #3b4e7e; }
+
+  #mobile-menu-open,
+  #mobile-menu-close {
+    display: block; }
+
+  .nav-container #menu {
+    display: none; }
+
+  .mobile-menu #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    overflow-y: auto;
+    box-shadow: none;
+    border-radius: 0; }
+    .mobile-menu #menu li {
+      display: block;
+      margin-bottom: 1.8rem;
+      font-size: 1.8rem; } }
+
+/*# sourceMappingURL=styles.css.map */
